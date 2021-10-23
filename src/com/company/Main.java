@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
 
@@ -95,6 +96,7 @@ public class Main {
             String[] linesAsArr = firstSplit[i].split(",");
             int years = Integer.parseInt(firstLine[0]);
             if (years == Integer.parseInt(linesAsArr[0])) {
+                year = years;
                 if (linesAsArr[1].equals("VOS")) {
                     VOSCount = Integer.parseInt(linesAsArr[3]);
                 }
@@ -111,7 +113,9 @@ public class Main {
                     USOCount = Integer.parseInt(linesAsArr[3]);
                 }
             } else {
+                Scanner sc = new Scanner(System.in);
                 arayList.add(new CSSZ(year, VOSCount, VSCount, ZAKCount, SOCount, USOCount));
+                year = 0;
                 VOSCount = 0;
                 VSCount = 0;
                 ZAKCount = 0;

@@ -113,7 +113,6 @@ public class Main {
                     USOCount = Integer.parseInt(linesAsArr[3]);
                 }
             } else {
-                Scanner sc = new Scanner(System.in);
                 arayList.add(new CSSZ(year, VOSCount, VSCount, ZAKCount, SOCount, USOCount));
                 year = 0;
                 VOSCount = 0;
